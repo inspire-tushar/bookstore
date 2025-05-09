@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Bookstore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ececec; /* Light grey background */
+            color: #555; /* Dark grey text */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #333; /* Dark grey color */
+            margin-bottom: 20px;
+        }
+
+        .thank-you-message {
+            font-size: 1.2em;
+            color: #777; /* Medium grey text */
+            margin-bottom: 30px;
+        }
+
+        .button {
+            background-color: #95a5a6; /* Light grey-blue button */
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #7f8c8d; /* Darker grey-blue button on hover */
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777; /* Medium grey text */
+        }
+
+        footer a {
+            color: #95a5a6; /* Light grey-blue for footer links */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Thank You for Reaching Out!</h1>
+        </header>
+
+        <section class="thank-you-message">
+            <p>We’ve received your message and will get back to you as soon as possible. We truly appreciate your interest in our bookstore.</p>
+            <p>If you have any other questions, feel free to <a href="{% url 'contact' %}" class="button">Contact Us Again</a>.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Bookstore. <a href="/">Back to Homepage</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>

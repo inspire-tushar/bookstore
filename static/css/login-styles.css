@@ -1,0 +1,154 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---------------------------- Body and general layout---------------------------- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/*---------------------------- Header styles ----------------------------*/
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ----------------------------Login Section---------------------------- */
+.login-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.login-form input {
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.login-form .btn-login {
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form .btn-login:hover {
+    background-color: #555;
+}
+
+/*---------------------------- Extra Options---------------------------- */
+.extra-options {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.extra-options a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.extra-options a:hover {
+    text-decoration: underline;
+}
+
+.extra-options p {
+    margin-top: 10px;
+}
+
+/*------------------------ Footer styles----------------------------- */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20%;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* -------------------------Container for consistent width-------------------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

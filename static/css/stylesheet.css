@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav .logo h1 {
+  margin-left: 20px;
+}
+
+nav .nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+nav .nav-links li {
+  margin-right: 20px;
+}
+
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav .nav-links a:hover {
+  text-decoration: underline;
+}
+
+.banner {
+  background: url(images/b2.jpg) no-repeat center center/cover;
+  color: #370dbe;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.banner h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.shop-now {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.shop-now:hover {
+  background-color: #555;
+}
+
+.books-collection {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.books-collection h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.book-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  background-color: #fff;
+  padding: 18px;
+  width: 250px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+}
+
+.book-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.book-card h3 {
+  margin-top: 14px;
+  font-size: 1.5em;
+}
+
+
+.book-card button {
+  margin-top: 22px;
+  padding: 10px 18px;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-card button:hover {
+  background-color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+}

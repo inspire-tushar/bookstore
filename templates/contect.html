@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bookstore</title>
+    <link rel="stylesheet" href="/static/css/contact-styles.css">
+</head>
+<body>
+
+
+
+    <!----------------- Header ke liye ----------------------->
+
+    <header>
+        <div class="container">
+            <h1>Book_Cloud</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{% url 'booklib' %}">Books</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+ <!---------------------------- Contact Us ke liye-------------------------->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+
+            <p>If you have any questions, comments, or concerns, feel free to reach out to us! We'd love to hear from you.</p>
+
+            <div class="contact-form">
+                <form method="post" action="{% url 'saveEnquiry' %}" >
+                    {% csrf_token %}
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+
+            <h3>Our Location</h3>
+            <p>Visit us at our office or reach us through the contact form:</p>
+            <p><strong>Book-Cloud </strong></p>
+            <p>123 Book Street, City, State, ZIP Code</p>
+            <p>Phone: 1234567890</p>
+            <p>Email: support@yourbookstore.com</p>
+        </div>
+    </section>
+
+
+
+    <!-------------------- Footer ke liye ----------------------------------------->
+    <footer>
+        <div class="container">
+            <p>Thanks for visiting.</p>
+        </div>
+    </footer>
+</body>
+</html>

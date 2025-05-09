@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book-cloud</title>
+  <link rel="stylesheet" href="/static/css/stylesheet.css">
+</head>
+<body>
+
+
+<!-------------header----------------------------------------->
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>Book-Cloud</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="{% url 'booklib' %}">Books</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+<!-------------banner ------------------------------------->
+
+
+  <section class="banner">
+    <div class="banner-text">
+      <h2>Discover Your Next Great Read</h2>
+      <p>Browse through a wide collection of books from various genres!</p>
+      <a href="{% url 'booklib' %}" class="shop-now">Explore Books!</a>
+    </div>
+  </section>
+
+
+<!-------------------- Book 1 hai ye------------------------------->
+
+
+  <section class="books-collection">
+    <h2>Popular Books</h2>
+    <div class="book-list">
+      <div class="book-card">
+        <img src="/static/images/s4.png" alt="Book 1">
+        <h3>Book 1</h3>
+        <button>Rs.400</button>
+      </div>
+       
+<!------------------ Book 2 hai ye  ---------------------------------->
+
+      <div class="book-card">
+        <img src="/static/images/s3.png" alt="Book 2">
+        <h3>Book 2</h3>
+        <button>Rs.400</button>
+      </div>
+
+<!------------- Book 3 hai ye ------------------------------------->
+      <div class="book-card">
+        <img src="/static/images/s2.png" alt="Book 3">
+        <h3>Book Title 3</h3>
+        <button>Rs.400</button>
+      </div>
+    </div>
+  </section>
+
+
+<!-------------footer------------------------------------------->
+
+
+
+  <footer>
+    <p>&copy; Thanks for visiting.</p>
+  </footer>
+
+</body>
+</html>

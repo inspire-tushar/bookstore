@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books Library</title>
+    <link rel="stylesheet" href="/static/css/lib.css">
+    
+    
+        
+</head>
+<body>
+
+    
+    
+    <section class="Books-library">
+        <div class="header2" >
+             <a href="/">Our Collection</a>
+        </div>
+       
+        <div class="grid-container">
+            <div class="Booksitem">
+                <img src="/static/images/s4.png" alt="Book 1">
+                <h3>Book 1</h3>
+                <button class="buy" data-id="1">Rs. 900/-</button>
+                
+            </div>
+
+
+            <div class="Booksitem">
+                <img src="/static/images/s2.png" alt="Book 2">
+                <h3>Book 2</h3>
+                <button class="buy" data-id="2">Rs. 900/-</button>
+            </div>
+
+
+            <div class="Booksitem">
+                <img src="/static/images/s3.png" alt="book 3">
+                <h3>Book 3</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+
+            <div class="Booksitem">
+                <img src="/static/images/s4.png" alt="book 4">
+                <h3>Book 4</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+
+            <div class="Booksitem">
+                <img src="/static/images/s5.jpg" alt="book 5">
+                <h3>Book 5</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+
+            <div class="Booksitem">
+                <img src="/static/images/s4.png" alt="book 6">
+                <h3>Book 6</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+            
+            <div class="Booksitem">
+                <img src="/static/images/s3.png" alt="book 7">
+                <h3>Book 3</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+
+            <div class="Booksitem">
+                <img src="/static/images/s4.png" alt="book 8">
+                <h3>Book 4</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+
+            <div class="Booksitem">
+                <img src="/static/images/s5.jpg" alt="book 9">
+                <h3>Book 5</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+
+            <div class="Booksitem">
+                <img src="/static/images/s4.png" alt="book 10">
+                <h3>Book 6</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+            <div class="Booksitem">
+                <img src="/static/images/s5.jpg" alt="book 11">
+                <h3>Book 5</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+
+            <div class="Booksitem">
+                <img src="/static/images/s4.png" alt="book 12">
+                <h3>Book 6</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+            
+
+            <div class="Booksitem">
+                <img src="/static/images/s4.png" alt="book 13">
+                <h3>Book 6</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+            
+            <div class="Booksitem">
+                <img src="/static/images/s3.png" alt="book 14">
+                <h3>Book 3</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+
+            <div class="Booksitem">
+                <img src="/static/images/s4.png" alt="book 15">
+                <h3>Book 4</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+
+            <div class="Booksitem">
+                <img src="/static/images/s5.jpg" alt="book 16">
+                <h3>Book 5</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+
+            <div class="Booksitem">
+                <img src="/static/images/s4.png" alt="book 17">
+                <h3>Book 6</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+            
+            <div class="Booksitem">
+                <img src="/static/images/s5.jpg" alt="book 18">
+                <h3>Book 5</h3>
+                <button type="buy" name="buy" class="buy">Rs. 900/-</button>
+            </div>
+
+
+        
+    </section>
+
+    
+    <footer>
+        <p>Thanks for visiting our shop!!</p>
+    </footer>
+
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('.buy').forEach(button => {
+            button.addEventListener('click', function () {
+                const bookId = this.getAttribute('data-id');
+                
+                fetch('/order/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `book_id=${bookId}`
+                })
+                .then(response => response.json())
+                .then(data => alert(data.message));
+            });
+        });
+    });
+</script>
